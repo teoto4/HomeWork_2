@@ -162,3 +162,22 @@ function averaging(...arg) {
 }
 
 console.log(averaging(...arrNumber3, 123, 25));
+
+/*8.
+Є масив об'єктів User. У них є ім'я та прізвище.
+Створити новий масив користувачів на основі старого,
+додавши при цьому до кожного об'єкта властивість `isSelected: false`.
+*/
+
+const users = [
+  { firstName: "Mickle", lastName: "Jackson" },
+  { firstName: "Megan", lastName: "Fox" },
+  { firstName: "Mike", lastName: "Johnson" },
+];
+
+const new_users = users.map((user) => ({
+  ...user,
+  isSelected: false,
+}));
+
+console.log(new_users);
