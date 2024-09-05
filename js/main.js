@@ -148,3 +148,17 @@ const phone2 = new Product("Apple", "iphoneXR", "1200 UAH", "black");
 const phone3 = new Product("Xiaomi", "RedmiNote5", "900 UAH", "white");
 
 console.log(phone1.toString());
+
+/*7.
+Створити функцію, яка приймає будь-яку кількість чисел і рахує середнє арифметичне та повертає його як результат.
+Викликати цю функцію з трьома аргументами і з масивом, у якому три значення.
+*/
+const arrNumber3 = [22, 45, 12];
+function averaging(...arg) {
+  const sum = arg.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  });
+  return sum / arg.length;
+}
+
+console.log(averaging(...arrNumber3, 123, 25));
