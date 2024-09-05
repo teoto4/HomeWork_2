@@ -110,6 +110,17 @@
           console.log(city); - "NewYork"<br />
         </code>
       </div>
+      <p>
+        5. Є дані в такому вигляді: `Ivan;Ivanov;1990;ivanov@gmail.com` Витягти
+        пошту та рік народження за допомогою деструктуризації.
+      </p>
+      <div class="code_container">
+        <code>
+          const data = `Ivan;Ivanov;1990;ivanov@gmail.com`;<br />
+          const [name, lastName, date, mail] = data.split(";");<br />
+          console.log(date, mail); - 1990 ivanov@gmail.com <br />
+        </code>
+      </div>
     </div>
     <script type="module" src="./js/main.js"></script>
   </body>

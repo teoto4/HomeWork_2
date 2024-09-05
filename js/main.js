@@ -109,3 +109,12 @@ const {
 
 console.log(country);
 console.log(city);
+
+/*5.
+Є дані в такому вигляді:  
+`Ivan;Ivanov;1990;ivanov@gmail.com`  
+Витягти пошту та рік народження за допомогою деструктуризації.
+*/
+const data = `Ivan;Ivanov;1990;ivanov@gmail.com`;
+const [name, lastName, date, mail] = data.split(";");
+console.log(date, mail);
