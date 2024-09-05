@@ -177,6 +177,23 @@
         користувачів на основі старого, додавши при цьому до кожного об'єкта
         властивість `isSelected: false`.
       </p>
+      <div class="code_container">
+        <code
+          >const users = [ <br />
+          { firstName: "Mickle", lastName: "Jackson" },<br />
+          { firstName: "Megan", lastName: "Fox" },<br />
+          { firstName: "Mike", lastName: "Johnson" },<br />
+          ];<br />
+          <br />
+          const new_users = users.map((user) => ({<br />
+          ...user,<br />
+          isSelected: false,<br />
+          }));<br />
+          <br />
+          console.log(new_users); - {firstName: 'Mickle', lastName: 'Jackson',
+          isSelected: false} ...<br />
+        </code>
+      </div>
     </div>
     <script type="module" src="./js/main.js"></script>
   </body>
