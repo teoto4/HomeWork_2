@@ -49,7 +49,6 @@ function fibanachi(n) {
   if (n === 1) {
     return 1;
   }
-  console.log(n);
   return fibanachi(n - 1) + fibanachi(n - 2);
 }
 
@@ -90,3 +89,23 @@ summ_btn.addEventListener("click", (e) => {
 За допомогою деструктуризації витягти країну та місто.
 */
 console.log("Деструктуризация");
+const project = {
+  name: "Facebook",
+  developer: {
+    name: "Michael",
+    lastName: "Fox",
+    address: {
+      country: "USA",
+      city: "NewYork",
+    },
+  },
+};
+
+const {
+  developer: {
+    address: { country, city },
+  },
+} = project;
+
+console.log(country);
+console.log(city);

@@ -80,6 +80,36 @@
       <input class="summ_inpt" type="number" />
       <input class="summ_btn" type="button" value="Click" />
       <p class="summ_result">Result:</p>
+
+      <p>
+        4. Створити об'єкт project. У нього є назва, наприклад, Facebook. У
+        нього є developer, у якого є ім'я, прізвище та address, а в address є
+        країна та місто. За допомогою деструктуризації витягти країну та місто.
+      </p>
+      <div class="code_container">
+        <code>
+          console.log("Деструктуризация"); <br />
+          const project = { <br />
+          name: "Facebook", <br />
+          developer: { <br />
+          name: "Michael", <br />
+          lastName: "Fox", <br />
+          address: { <br />
+          country: "USA", <br />
+          city: "NewYork", <br />
+          }, <br />
+          }, <br />
+          }; <br />
+          <br />
+          const { <br />
+          developer: { <br />
+          address: { country, city }, <br />
+          },<br />
+          } = project; <br />
+          console.log(country); - "USA"<br />
+          console.log(city); - "NewYork"<br />
+        </code>
+      </div>
     </div>
     <script type="module" src="./js/main.js"></script>
   </body>
