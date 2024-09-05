@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="center">
+      <h2>HomeWork - 2</h2>
+      <p>
+        1. Факторіал числа (використати рекурсію) Напишіть рекурсивну функцію,
+        яка обчислює факторіал заданого числа. Факторіал числа n позначається як
+        n! і визначається як добуток усіх додатних цілих чисел від 1 до n.
+      </p>
+      <div class="code_container">
+        <code>
+          function rekursionFactor(x) { <br />
+          if (x === 0 || x === 1) { <br />
+          return 1; <br />
+          } <br />
+          return x * rekursionFactor(x - 1); <br />
+          } <br />
+          <br />
+          console.log(rekursionFactor(14)); - 87178291200 Проверка в консоли.
+        </code>
+      </div>
+      <input class="factoria_inpt" type="number" />
+      <input id="factoria_btn" type="button" value="Click" />
+      <p class="factoria_result">Result:</p>
+      <p>
+        2. Числа Фібоначчі (використати рекурсію) Напишіть рекурсивну функцію,
+        яка повертає n-те число Фібоначчі. Ряд Фібоначчі визначається наступним
+        чином: перші два числа дорівнюють 0 і 1, а кожне наступне число — це
+        сума двох попередніх.
+      </p>
+      <div class="code_container">
+        <code>
+          console.log("Числа фибаначи"); <br />
+          <br />
+          function fibanachi(n) { <br />
+          if (n === 0) { <br />
+          return 0; <br />
+          } <br />
+          if (n === 1) { <br />
+          return 1; <br />
+          } <br />
+          return fibanachi(n - 1) + fibanachi(n - 2); <br />
+          } <br />
+          <br />
+          console.log(fibanachi(12)) - 144;
+          <br />
+        </code>
+      </div>
+      <input class="fibanachi_inpt" type="number" />
+      <input class="fibanachi_btn" type="button" value="Click" />
+      <p class="fibanachi_result">Result:</p>
+      <p>
+        3. Сума цифр числа (використати рекурсію) Напишіть рекурсивну функцію,
+        яка повертає суму всіх цифр заданого числа. Якщо число від'ємне, функція
+        повинна обробляти його як додатнє.
+      </p>
+      <div class="code_container">
+        <code>
+          console.log("Сумма"); <br />
+          <br />
+          function sumOfNumb(numb) { <br />
+          numb = Math.abs(numb); <br />
+          if (numb < 10) { <br />
+          return numb; <br />
+          } <br />
+          <br />
+          return (numb % 10) + sumOfNumb(Math.floor(numb / 10)); <br />
+          } <br />
+          <br />
+          console.log(sumOfNumb(123));
+        </code>
+      </div>
+      <input class="summ_inpt" type="number" />
+      <input class="summ_btn" type="button" value="Click" />
+      <p class="summ_result">Result:</p>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
