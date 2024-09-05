@@ -121,6 +121,39 @@
           console.log(date, mail); - 1990 ivanov@gmail.com <br />
         </code>
       </div>
+      <p>
+        6. Створити об'єкт телефон за допомогою функції конструктора, у нього є
+        бренд, модель, ціна, колір. Створити три об'єкти телефонів. Наприклад:
+        бренд: Samsung, модель: x100, ціна: 1000 грн, колір: червоний. Під час
+        перетворення в рядок потрібно відобразити інформацію.
+      </p>
+      <div class="code_container">
+        <code>
+          function Product(brend, model, price, color) { <br />
+          this.brend = brend; <br />
+          this.model = model;<br />
+          this.price = price;<br />
+          this.color = color;<br />
+          this.toString = function () { <br />
+          return `<br />
+          Brend:${this.brend}, <br />
+          Model:${this.model}, <br />
+          Price:${this.price}, <br />
+          Color:${this.color} <br />
+          `;<br />
+          };<br />
+          }<br />
+
+          const phone1 = new Product("Samsung", "x100", "1000 UAH", "red");<br />
+          const phone2 = new Product("Apple", "iphoneXR", "1200 UAH",
+          "black");<br />
+          const phone3 = new Product("Xiaomi", "RedmiNote5", "900 UAH",
+          "white");<br />
+
+          console.log(phone1.toString()); - Brend:Samsung, Model:x100,
+          Price:1000 UAH, Color:red
+        </code>
+      </div>
     </div>
     <script type="module" src="./js/main.js"></script>
   </body>

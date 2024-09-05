@@ -118,3 +118,33 @@ console.log(city);
 const data = `Ivan;Ivanov;1990;ivanov@gmail.com`;
 const [name, lastName, date, mail] = data.split(";");
 console.log(date, mail);
+/*6.
+Створити об'єкт телефон за допомогою функції конструктора, у нього є бренд, модель, ціна, колір.
+Створити три об'єкти телефонів. Наприклад:  
+бренд: Samsung,  
+модель: x100,  
+ціна: 1000 грн,  
+колір: червоний.  
+Під час перетворення в рядок потрібно відобразити інформацію.
+*/
+function Product(brend, model, price, color) {
+  this.brend = brend;
+  this.model = model;
+  this.price = price;
+  this.color = color;
+
+  this.toString = function () {
+    return `
+    Brend:${this.brend}, 
+    Model:${this.model}, 
+    Price:${this.price}, 
+    Color:${this.color}
+    `;
+  };
+}
+
+const phone1 = new Product("Samsung", "x100", "1000 UAH", "red");
+const phone2 = new Product("Apple", "iphoneXR", "1200 UAH", "black");
+const phone3 = new Product("Xiaomi", "RedmiNote5", "900 UAH", "white");
+
+console.log(phone1.toString());
